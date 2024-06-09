@@ -1100,13 +1100,22 @@ img.download-icon {
 }
 .contact-message .col-contact{
   text-align: center;
-}
+}/*
 .intro .overlay-itro{
   background-image: url('../img/intro-bg3.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}*/
+.background-image-desktop{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+}
+.background-image-movile{
+  display: none;
 }
 #get_in-touch{ 
   background-image: url('../img//overlay-bg.jpg');
@@ -1225,6 +1234,15 @@ img.download-icon {
   }
 }
 @media screen and (max-width:455px) {
+  .background-image-desktop{
+    display: none;
+  }
+  .background-image-movile{
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+  }
   .row.personal-info{
     display: flex;
     flex-direction: column;
