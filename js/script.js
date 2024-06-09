@@ -1,31 +1,54 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+
+//POP-UP (PROJECT-INFO)
+document.addEventListener('DOMContentLoaded', () => {
     const projectShadows = document.querySelectorAll('.project-shadow');
     const projectInfos = document.querySelectorAll('.project-info');
     const closeBtns = document.querySelectorAll('.close-btn');
 
-    projectShadows.forEach((shadow, index)=>{
-        shadow.addEventListener('click', ()=>{
-        
+    // Function to close all pop-ups
+    const closeAllPopups = () => {
+        projectInfos.forEach(info => {
+            info.classList.remove('show');
+        });
+    };
+
+    // Show pop-up
+    projectShadows.forEach((shadow, index) => {
+        shadow.addEventListener('click', (event) => {
+            closeAllPopups(); // Close any open pop-ups
             document.querySelector(`.info${index + 1}`).classList.add('show');
+            event.stopPropagation(); // Stop event from propagating to document
         });
     });
 
-    closeBtns.forEach((button, index)=>{
-        button.addEventListener('click', ()=> {
-          
+    // Close pop-up when you click the close icon
+    closeBtns.forEach((button, index) => {
+        button.addEventListener('click', () => {
             document.querySelector(`.info${index + 1}`).classList.remove('show');
         });
     });
 
-    window.addEventListener('scroll', ()=> {
-        projectInfos.forEach(info => {
-            info.classList.remove('show')
-        });
-        
-      
+    // Close pop-up when you scroll
+    window.addEventListener('scroll', () => {
+        closeAllPopups();
     });
 
+    // Close pop-up when you click outside of it
+    document.addEventListener('click', (event) => {
+        const isClickInside = Array.from(projectInfos).some(info => info.contains(event.target));
+        if (!isClickInside) {
+            closeAllPopups();
+        }
+    });
+
+    // Prevent clicks inside the pop-up from closing it
+    projectInfos.forEach(info => {
+        info.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    });
 });
+
 
 //SCROLL REVEAL
 document.addEventListener('DOMContentLoaded', ()=>{

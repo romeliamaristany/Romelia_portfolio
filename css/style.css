@@ -1282,7 +1282,7 @@ img.icons-links {
 }
 ul.social-main-ul {
   position: absolute;
-  top: 14em;
+  top: 10em;
   right: 2rem;
 }
 
@@ -1307,13 +1307,15 @@ ul.social-main-ul {
   opacity: 0;
  
 }
-.project-shadow h3{
+.project-shadow h4{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   color: white;
   transition: opacity 0.5s ease;
+  padding: 15px;
+  text-align: center;
 }
 .project-shadow:hover{
   opacity: 1;
@@ -1333,7 +1335,7 @@ ul.social-main-ul {
   right: 20%;
   text-align: center;
   padding: 20px 20px;
-  grid-template-columns: 1fr 20px;
+  /*grid-template-columns: 1fr 20px;*/
   border-radius: 10px;
   display: none;
   box-shadow:0 12px 24px hsla(0,0%,0%,.3);
@@ -1355,12 +1357,16 @@ ul.social-main-ul {
 .project-info-text{
   padding: 20px 0;
 }
-
 .show{
-  display: grid;
- 
+  display: initial;
 }
-
+.container-close-icon {
+  position: relative;
+}
+img.close-btn {
+  position: absolute;
+  right: 0;
+}
 img.download-icon {
   width: 30px;
 }
@@ -1421,7 +1427,15 @@ img.download-icon {
   text-align: center;
 }
 /*RESPONSIVE */
+@media screen and (max-width:1125px) {
+  .project-info{
+    bottom: 10rem;
+  }
+}
 @media screen and (max-width:995px) {
+  .intro .intro-title {
+    font-size: 3.5rem;
+  }
    .row.personal-info{
     display: flex;
     flex-direction: column;
@@ -1436,13 +1450,14 @@ img.download-icon {
    }
 }
 @media screen and (max-width:768px) {
-  ul.social-main-ul {
-    top: 18em;
+  .intro .intro-title {
+    font-size: 3rem;
   }
   .row.personal-info{
    flex-direction: row;
    margin-bottom: 0;
   }
+  
   .img-fluid {
     max-width: 74%;
   }
@@ -1463,9 +1478,22 @@ img.download-icon {
   .row-projects{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
   }
+  .row-projects .col-md-4{
+    padding: 0;
+  }
+  
   .project-img img, .project-shadow{
     height: 180px;
+  }
+  .project-img img{
+    margin-bottom: 0;
+  }
+  .project-info {
+    bottom: 7rem;
+    width: 80%;
+    left: 10%;
   }
   .col-contact{
     text-align: center;
@@ -1473,6 +1501,10 @@ img.download-icon {
   }
 }
 @media screen and (max-width:577px) {
+  .row-projects{
+    padding: 0 25px;
+    gap: 1.5rem;
+  }
   .row.personal-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1488,16 +1520,22 @@ img.download-icon {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .project-info {
+    bottom: 5rem;
 }
-@media screen and (max-width:510px) {
+}
+@media screen and (max-width:516px) {
+  .intro .intro-title {
+    font-size: 2.5rem;
+  }
   .img-fluid {
     max-width: 75%;
   }
+  .project-img img, .project-shadow {
+    height: 140px;
+  }
 }
 @media screen and (max-width:455px) {
-  ul.social-main-ul {
-    top: 16em;
-  }
   .row.personal-info{
     display: flex;
     flex-direction: column;
@@ -1521,6 +1559,8 @@ img.download-icon {
     padding-left: 20px;
     padding-right: 20px;
   }
-
+  .row-projects{
+    gap: 1em;
+  }
   
 }
