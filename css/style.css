@@ -1576,5 +1576,8 @@ img.download-icon {
   .row-projects{
     gap: 1em;
   }
+  .project-shadow:hover{
+    opacity: 0;
+  }
   
 }
