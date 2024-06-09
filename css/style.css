@@ -1427,6 +1427,9 @@ img.download-icon {
 .contact-message .col-contact{
   text-align: center;
 }
+#home{
+  background-image: url('../img/intro-bg3.png');
+}
 #home, #get_in-touch{
   background-size: cover;
   background-position: center;
@@ -1542,7 +1545,8 @@ img.download-icon {
     height: 140px;
   }
   #home{
-    background-size: contain;
+    background-image: url('../img/intro-bg2.png');
+    background-position: bottom;
   }
 }
 @media screen and (max-width:455px) {
