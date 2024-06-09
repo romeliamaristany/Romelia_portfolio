@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         easing: 'ease-out',
         reset: true
     });
-    ScrollReveal().reveal('.download-icon', {
+ /*   ScrollReveal().reveal('.download-icon', {
         duration: 500,
         origin: 'bottom',
         distance: '10px',
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         afterReveal: function (el){
             el.classList.add('visible');
         }
-    });
+    });*/
     ScrollReveal().reveal('.box-shadow-full', {
         duration: 1000,
         origin: 'bottom',

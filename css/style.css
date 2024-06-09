@@ -1369,6 +1369,7 @@ img.close-btn {
 }
 img.download-icon {
   width: 30px;
+  margin-bottom: 5px;
 }
 .download-btn{
   display: flex;
@@ -1426,6 +1427,12 @@ img.download-icon {
 .contact-message .col-contact{
   text-align: center;
 }
+#home, #get_in-touch{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /*RESPONSIVE */
 @media screen and (max-width:1125px) {
   .project-info{
