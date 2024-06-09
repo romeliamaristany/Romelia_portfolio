@@ -1545,7 +1545,7 @@ img.download-icon {
     height: 140px;
   }
   #home{
-    background-image: url('../img/intro-bg2.png');
+    background-image: url('../img/intro-bg2.webp');
     background-position: bottom;
   }
 }
