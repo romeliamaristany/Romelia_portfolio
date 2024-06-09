@@ -1112,7 +1112,6 @@ img.download-icon {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  opacity: .8;
 }
 .background-image-movile{
   display: none;
@@ -1241,7 +1240,6 @@ img.download-icon {
     display: block;
     width: 100%;
     height: 100%;
-    opacity: .8;
   }
   .row.personal-info{
     display: flex;
