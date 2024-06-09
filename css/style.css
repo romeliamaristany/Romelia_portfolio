@@ -1541,6 +1541,9 @@ img.download-icon {
   .project-img img, .project-shadow {
     height: 140px;
   }
+  #home{
+    background-size: contain;
+  }
 }
 @media screen and (max-width:455px) {
   .row.personal-info{
